@@ -1,1 +1,2 @@
-# PyRv - **Py**ramidal **Re**cursive learning for text representations
+# PyRv
+**Py**ramidal **Re**cursive learning for text representations
