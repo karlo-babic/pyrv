@@ -1,10 +1,10 @@
 # PyRvNN: Pyramidal Recursive Neural Network for Text Representation Learning
 
 This repository presents **Pyramidal Recursive Learning (PyRv)**, which leverages the **Pyramidal Recursive Neural Network (PyRvNN)** to model text hierarchically, from subwords to sentences. PyRv has four main properties:
-- **Representation Compositionality**: Combines multiple representations into a unified whole, capturing structured meaning \cite{irsoy2014deep, frandsen2019understanding, hartung2017learning}.
-- **Hierarchical Representation**: Represents text at multiple levels, aiding analysis of complex morphology \cite{socher2011semi, drozdov2019unsupervised}.
-- **Representation Decodability**: Enables reconstruction of original text, ensuring interpretability \cite{li2015hierarchical}.
-- **Self-Supervised Learning**: Learns without labeled data, unlike recursive models requiring parse trees \cite{socher2013recursive, tai2015improved}.
+- **Representation Compositionality**: Combines multiple representations into a unified whole, capturing structured meaning.
+- **Hierarchical Representation**: Represents text at multiple levels, aiding analysis of complex morphology.
+- **Representation Decodability**: Enables reconstruction of original text, ensuring interpretability.
+- **Self-Supervised Learning**: Learns without labeled data, unlike most recursive models requiring parse trees.
 
 The implementation consists of five core modules:
 
