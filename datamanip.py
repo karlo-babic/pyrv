@@ -102,8 +102,8 @@ def subword_pairs_prep(embs, word_lvl_lengths, word_embs, subword_depth):
         enc_pairs = np.concatenate(enc_pairs, axis=0)
         
         empty_onehot = np.zeros((enc_pairs.shape[0], len(VOCAB)*2))
-        empty_onehot[:, TOKEN_TO_ID["<subtokenlvl>"]] = 1
-        empty_onehot[:, len(VOCAB) + TOKEN_TO_ID["<subtokenlvl>"]] = 1
+        empty_onehot[:, TOKEN_TO_ID["<subwordlvl>"]] = 1
+        empty_onehot[:, len(VOCAB) + TOKEN_TO_ID["<subwordlvl>"]] = 1
         enc_pairs = np.concatenate( (empty_onehot, enc_pairs), axis=1 )
 
         # creating the reg output "emptyOneHot+Dense" vector
@@ -141,8 +141,8 @@ def phraselvl_pairs_prep(embs):
     # creating the input (and enc output) "emptyOneHot+Dense" vector
     enc_pairs = _make_pairs(embs)
     empty_onehot = np.zeros((enc_pairs.shape[0], len(VOCAB)*2))
-    empty_onehot[:, TOKEN_TO_ID["<tokenlvl>"]] = 1
-    empty_onehot[:, len(VOCAB) + TOKEN_TO_ID["<tokenlvl>"]] = 1
+    empty_onehot[:, TOKEN_TO_ID["<phraselvl>"]] = 1
+    empty_onehot[:, len(VOCAB) + TOKEN_TO_ID["<phraselvl>"]] = 1
     enc_pairs = np.concatenate( (empty_onehot, enc_pairs), axis=1 )
     
     # creating the reg output "emptyOneHot+Dense" vector

@@ -60,7 +60,7 @@ def text_to_words_onehots(text):
     words = list(filter(None, text.split(" ")))
     words_tokenIDs = [ [] for i in range(len(words)) ]
     for i in range(len(words)):
-        words_tokenIDs[i] = np.concatenate(( [TOKEN_TO_ID["<tkn.beg>"]], _string_to_tokenIDs(words[i]), [TOKEN_TO_ID["<tkn.end>"]] ))
+        words_tokenIDs[i] = np.concatenate(( [TOKEN_TO_ID["<word.beg>"]], _string_to_tokenIDs(words[i]), [TOKEN_TO_ID["<word.end>"]] ))
     words_onehots = [ _tokenIDs_to_onehots(word_tokenIDs) for word_tokenIDs in words_tokenIDs ]
     words_onehots = list(filter(lambda x: x != [], words_onehots))
     return words_onehots

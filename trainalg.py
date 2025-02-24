@@ -122,7 +122,7 @@ class Monitor():
 
     def _eval_phraselvl(self, embs, word_lengths, depth, losses):
         chars = infer.decode_phraselvl_to_string(self.model, embs, word_lengths, depth)
-        chars_out = ''.join(chars).replace("<tkn.beg>", " ").replace("<tkn.end>", " ").replace("<subtokenlvl>", "_").replace("<tokenlvl>", "_")
+        chars_out = ''.join(chars).replace("<word.beg>", " ").replace("<word.end>", " ").replace("<subwordlvl>", "_").replace("<phraselvl>", "_")
 
         print_string = ""
         if depth == 0:

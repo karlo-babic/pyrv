@@ -2,10 +2,10 @@ import json
 
 
 EMBEDDING_SIZE = 2000
-DATASET = "wiki.txt"
-INDEX_FILE = "indexed_lines.txt"
+DATASET = "../../wiki2.txt"
+INDEX_FILE = "../indexed_lines_all2.txt"
 SAVED_STATE = "saved_state.txt"
-TOKENIZER_FILENAME = "bpe_tokenizer_500_50.json"
+TOKENIZER_FILENAME = "../bpe_tokenizer_500_50.json"
 
 bpe_json = open(TOKENIZER_FILENAME).read()
 bpe_json = json.loads(bpe_json)
